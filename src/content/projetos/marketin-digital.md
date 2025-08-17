@@ -72,8 +72,8 @@ A base de dados utilizada contém informações sobre **o desempenho das campanh
 
 ## 📊 **Visualização do Dashboard**  
 <p align="center">
-  <img src="/projetos/Marketin Digital/imagens/visao-geral.png" width="500px">
-  <img src="/projetos/Marketin Digital/imagens/detalhamento.png" width="500px">
+  <img src="/projetos/Marketin Digital/imagens/visao-geral.png">
+  <img src="/projetos/Marketin Digital/imagens/detalhamento.png">
 </p> 
 
 ---
