@@ -1,0 +1,119 @@
+---
+import { getCollection, type CollectionEntry } from 'astro:content';
+
+// Carrega todos os projetos da Content Collection
+const projetos = await getCollection('projetos');
+---
+
+<section class="projects" id="projetos">
+  <h2 class="projects-title">Projetos</h2>
+
+  <div class="projects-container">
+    {projetos.map((projeto: CollectionEntry<'projetos'>) => (
+      <div class="project-card">
+        <div>
+          <img src={projeto.data.image} alt={projeto.data.title} />
+          <h3>{projeto.data.title}</h3>
+          <p>{projeto.data.description}</p>
+        </div>
+        <a href={`/projeto/${projeto.slug}`} class="project-link">
+          <button>Saiba mais</button>
+        </a>
+      </div>
+    ))}
+  </div>
+</section>
+
+<style>
+  .projects {
+    background: var(--color-header);
+    padding: 3rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .projects-title {
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 3rem;
+    text-align: center;
+    color: var(--color-text);
+  }
+
+  /* Container flexível de cards */
+  .projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center; /* centraliza os cards */
+    width: 100%;
+    max-width: 1200px;
+  }
+
+  /* Card individual */
+  .project-card {
+    flex: 1 1 300px; /* largura mínima e flexível */
+    max-width: 350px;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    transition:
+      transform 0.2s ease,
+      box-shadow 0.2s ease;
+  }
+
+  .project-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+  }
+
+  .project-card h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--color-primary);
+    text-align: center;
+  }
+
+  .project-card p {
+    font-size: 0.95rem;
+    color: var(--color-text);
+    text-align: center;
+  }
+
+  /* Hover */
+  .project-card:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  }
+
+  .project-link {
+    text-decoration: none;
+    color: inherit;
+    margin-top: 1rem;
+    align-self: flex-end;
+  }
+
+  /* Responsivo */
+  @media (max-width: 960px) {
+    .project-card {
+      flex: 1 1 45%; /* duas colunas */
+    }
+  }
+
+  @media (max-width: 680px) {
+    .project-card {
+      flex: 1 1 90%; /* uma coluna */
+    }
+  }
+</style>

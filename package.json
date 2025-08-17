@@ -1,0 +1,16 @@
+{
+  "name": "portfolio-marcio",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "astro": "^5.13.2",
+    "emailjs-com": "^3.2.0",
+    "marked": "^16.1.2"
+  }
+}

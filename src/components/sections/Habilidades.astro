@@ -1,0 +1,135 @@
+<section class="skills" id="habilidades">
+  <h2 class="skills-title">Habilidades</h2>
+
+  <!-- Pilar 1: Comunicação -->
+  <div class="skill-group">
+    <div class="skill-image">
+      <img src="/habilidades/comunicacao.png" alt="Comunicação" />
+    </div>
+    <div class="skill-text">
+      <h3>Comunicação</h3>
+      <p>
+        Habilidade de transmitir informações de forma clara e assertiva,
+        adaptando a linguagem para diferentes públicos e garantindo entendimento
+        e alinhamento entre equipes e stakeholders.
+      </p>
+    </div>
+  </div>
+
+  <!-- Pilar 2: Desenvolvimento -->
+  <div class="skill-group reverse">
+    <div class="skill-image">
+      <img src="/habilidades/desenvolvimento.png" alt="Desenvolvimento" />
+    </div>
+    <div class="skill-text">
+      <h3>Desenvolvimento</h3>
+      <p>
+        Capacidade de criar soluções técnicas e analisar dados com ferramentas
+        como Python, SQL e Power BI, desenvolvendo dashboards, automações e
+        relatórios precisos.
+      </p>
+    </div>
+  </div>
+
+  <!-- Pilar 3: Organização -->
+  <div class="skill-group">
+    <div class="skill-image">
+      <img src="/habilidades/organizacao.png" alt="Organização" />
+    </div>
+    <div class="skill-text">
+      <h3>Organização</h3>
+      <p>
+        Competência em estruturar processos, priorizar tarefas e gerenciar
+        projetos, garantindo eficiência operacional, cumprimento de prazos e
+        alinhamento das metas.
+      </p>
+    </div>
+  </div>
+</section>
+
+<style>
+  .skills {
+    background: var(--color-header);
+    padding: 3rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .skills-title {
+    font-size: 2rem;
+    font-weight: 400; /* fonte mais fina */
+    margin-bottom: 3rem;
+    text-align: center;
+    color: var(--color-text);
+  }
+
+  /* Grupo de habilidades */
+  .skill-group {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* centro horizontal */
+    gap: 2rem;
+    margin-bottom: 3rem;
+    width: 100%;
+  }
+
+  .skill-group.reverse {
+    flex-direction: row-reverse;
+  }
+
+  .skill-image img {
+    width: 300px; /* maior */
+    max-width: 50%;
+    object-fit: cover;
+    /* sem borda, sem fundo */
+  }
+
+  .skill-text {
+    background: rgba(255, 255, 255, 0.85); /* caixinha sutil */
+    padding: 2rem;
+    border-radius: 12px;
+    max-width: 500px;
+    font-weight: 300; /* mais fina */
+    text-align: center; /* centraliza conteúdo dentro da caixinha */
+  }
+
+  .skill-text h3 {
+    font-size: 1.4rem;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+    color: var(--color-text); /* não azul */
+  }
+
+  .skill-text p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--color-text);
+  }
+
+  .skill-image {
+    text-align: center;
+  }
+
+  /* Responsivo */
+  @media (max-width: 768px) {
+    .skill-group,
+    .skill-group.reverse {
+      flex-direction: column;
+    }
+
+    .skill-image {
+      width: 100%;
+    }
+
+    .skill-image img {
+      width: 100px;
+      margin: 0 auto;
+      margin-bottom: 1rem;
+    }
+
+    .skill-text {
+      max-width: 90%;
+    }
+  }
+</style>

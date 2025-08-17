@@ -1,0 +1,70 @@
+<header>
+    <a href="/" class="logo-link">
+        <h1>Márcio Alvim</h1>
+    </a>
+    <nav>
+        <a href="/#sobre">Sobre</a>
+        <a href="/#habilidades">Habilidades</a>
+        <a href="/#projetos">Projetos</a>
+        <a href="/#contato">Contato</a>
+        <a href="/curriculo.pdf" target="_blank" class="cv">CV</a>
+    </nav>
+</header>
+
+<style>
+    /* Header */
+    header {
+        background-color: var(--color-header);
+        padding: 1rem 2rem;
+        border-bottom: 1px solid #ddd;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+        color: var(--color-text);
+        margin: 0;
+    }
+
+    .logo-link {
+        text-decoration: none;
+    }
+
+    .logo-link h1:hover {
+        color: var(--color-primary);
+        cursor: pointer;
+        transition: color 0.2s ease-in-out;
+    }
+
+    header nav {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    a {
+        color: var(--color-text);
+        text-decoration: none;
+        font-weight: 500;
+    }
+
+    .cv {
+        border: 1px solid var(--color-primary);
+        padding: 0.2rem 0.5rem;
+        border-radius: 30px;
+        transition: background-color 0.2s ease-in-out;
+    }
+
+    .cv:hover {
+        text-decoration: none;
+        font-style: unset;
+        background-color: var(--color-primary);
+        color: #fff;
+    }
+</style>

@@ -1,0 +1,30 @@
+---
+import Header from "../components/Header.astro";
+import Hero from "../components/sections/Hero.astro";
+import Habilidades from "../components/sections/Habilidades.astro";
+import Projetos from "../components/sections/Projetos.astro";
+import Footer from "../components/Footer.astro";
+import DefaultLayout from "../layouts/Default.astro";
+---
+
+<DefaultLayout
+  title="Márcio Alvim - Analista de Dados"
+  description="Portfólio de Márcio Alvim, Analista de Dados BI. Projetos, habilidades e experiência em análise de dados, visualização e storytelling."
+  image="/favicon.svg"
+>
+  <Header />
+  <main>
+    <Hero />
+    <Habilidades />
+    <Projetos />
+    <Footer />
+  </main>
+</DefaultLayout>
+
+<style>
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+</style>

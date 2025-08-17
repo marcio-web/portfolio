@@ -1,0 +1,66 @@
+/* globals.css */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Variáveis globais de cores */
+:root {
+  --color-bg: #f5f5f5;         /* fundo cinza claro */
+  --color-header: #ffffff;     /* header branco */
+  --color-text: #333333;       /* texto padrão */
+
+  --color-primary: #1e4e8c;    /* azul principal (escuro) */
+  --color-primary-hover: #163d6e; /* azul mais escuro no hover */
+
+  --title-font: 'Raleway', sans-serif;
+}
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fundo geral */
+body {
+  font-family: sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+/* Links e botões */
+button {
+  background-color: var(--color-primary);
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+
+/* Hover */
+button:hover {
+  background-color: var(--color-primary-hover);
+  transition: background-color 0.2s ease-in-out;
+}
+
+a:hover {
+  color: var(--color-primary-hover);
+  text-decoration: underline;
+  font-style: italic;
+  transition: color 0.2s ease-in-out;
+}
+
+h1 {
+  font-family: var(--title-font);
+  margin-bottom: 1rem;
+  color: var(--color-primary);
+}

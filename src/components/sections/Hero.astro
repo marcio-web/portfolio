@@ -1,0 +1,189 @@
+<section id="sobre">
+  <div class="hero">
+    <div class="hero-text">
+      <h1>Márcio <span>Alvim</span></h1>
+      <h2>Analista de Dados</h2>
+      <p class="mt-3 text-center">
+        <!-- TODO: Fazer copy -->
+         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum autem corrupti suscipit in nesciunt quas reiciendis quaerat nostrum itaque iste quo blanditiis repudiandae laboriosam, eaque accusamus quis tempore ullam iusto.
+      </p>
+    </div>
+
+    <div class="hero-img">
+      <img src="/dashboard-example.jpg" alt="Dashboard exemplo" />
+    </div>
+  </div>
+
+  <section class="beneficios">
+    <div class="beneficio">
+      <i class="bi bi-bar-chart-line"></i>
+      <h3>Análises Precisas</h3>
+      <p>
+        Transforma dados complexos em insights claros que apoiam decisões
+        estratégicas.
+      </p>
+    </div>
+
+    <div class="beneficio">
+      <i class="bi bi-lightbulb"></i>
+      <h3>Soluções Inovadoras</h3>
+      <p>
+        Desenvolve dashboards e relatórios que otimizam processos e aumentam
+        resultados.
+      </p>
+    </div>
+
+    <div class="beneficio">
+      <i class="bi bi-people"></i>
+      <h3>Foco no Cliente</h3>
+      <p>
+        Colabora de forma próxima para alinhar análises com as necessidades do
+        negócio.
+      </p>
+    </div>
+  </section>
+</section>
+
+<style>
+  h1 {
+    font-size: 5rem;
+    font-weight: 700;
+    font-style: italic;
+  }
+
+  .hero {
+    display: flex;
+    align-items: stretch;
+    min-height: 80vh;
+  }
+
+  .hero-text {
+    flex: 1;
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero-img {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* imagem ocupando todo container */
+  .hero-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    /* Faz o corte diagonal: 
+     lado direito = reto 
+     lado esquerdo = diagonal descendo */
+    clip-path: polygon(20% 0, 100% 0, 100% 100%, 20% 100%, 0 50%);
+  }
+
+  .beneficios {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 4rem;
+    background: var(--color-header); /* branco suave */
+    text-align: center;
+  }
+
+  .beneficio {
+    padding: 2rem;
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition:
+      transform 0.2s ease,
+      box-shadow 0.2s ease;
+  }
+
+  .beneficio:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  }
+
+  .beneficio i {
+    font-size: 2.5rem;
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+  }
+
+  .beneficio h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: var(--color-primary);
+  }
+
+  .beneficio p {
+    font-size: 0.95rem;
+    color: var(--color-text);
+  }
+
+  @media (max-width: 1100px) {
+    .hero {
+      position: relative;
+      flex-direction: column;
+      min-height: 60vh;
+    }
+
+    .hero-img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+    }
+
+    .hero-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      clip-path: none; /* remove o corte diagonal pra ficar full */
+    }
+
+    .hero-text {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      padding: 2rem;
+      background: rgba(218, 226, 243, 0.7); /* opcional pra contraste */
+    }
+
+    .hero-text h1 {
+      font-size: 3rem;
+    }
+
+    .hero-text h2 {
+      font-size: 1.5rem;
+    }
+  }
+
+  @media (max-width: 960px) {
+    .beneficios {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .beneficio:last-child {
+      grid-column: span 2;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .beneficios {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      padding: 2rem;
+    }
+
+    .beneficio:last-child {
+      grid-column: auto;
+    }
+  }
+</style>
